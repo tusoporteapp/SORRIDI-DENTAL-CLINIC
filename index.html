@@ -94,7 +94,32 @@
     </div>
     <div class="modal fade" role="dialog" tabindex="-1" id="modal-1" style="background: rgba(17,35,52,0.5);">
         <div class="modal-dialog modal-sm modal-dialog-centered modal-dialog-scrollable modal-fullscreen" role="document">
-            <div class="modal-content">
+            <div class="modal-content"><script>
+function compartirPagina() {
+    // Texto predeterminado para compartir (puedes cambiarlo según tus necesidades)
+    var textoPersonalizado = "¡Echa un vistazo a esta página increíble!";
+    
+    // URL de la página actual
+    var urlPagina = window.location.href;
+    
+    // Crear el texto de la compartición
+    var textoCompartir = textoPersonalizado + "\n" + urlPagina;
+    
+    // Verificar si el navegador soporta la API de Web Share
+    if (navigator.share) {
+        navigator.share({
+            title: document.title,
+            text: textoCompartir,
+            url: urlPagina
+        })
+        .then(() => console.log('Contenido compartido exitosamente.'))
+        .catch((error) => console.error('Error al compartir:', error));
+    } else {
+        // Si el navegador no soporta la API de Web Share, puedes implementar otro comportamiento aquí
+        alert("Tu navegador no soporta la función de compartir.");
+    }
+}
+</script>
                 <div class="modal-body">
                     <div class="carousel slide carousel-fade" data-bs-ride="carousel" id="carousel-1" style="height: 300px;">
                         <div class="carousel-inner h-100">
@@ -114,7 +139,7 @@
                                         <h4 class="card-title" style="color: var(--bs-body-bg);">Limpieza + Blanqueamiento Express</h4>
                                         <h6 class="mb-2" style="color: var(--bs-body-bg);">OFERTA LIMITADA</h6>
                                     </div>
-                                    <div class="d-flex align-items-center"><button class="btn btn-primary" type="button" style="width: 100%;background: rgb(255,255,255);border-style: none;border-top-right-radius: 0px;border-bottom-right-radius: 0px;border-top-left-radius: 0px;color: rgb(17,35,52);">Información</button><button class="btn btn-primary" type="button" style="width: 100%;background: rgb(17,35,52);border-style: none;border-top-right-radius: 0px;border-bottom-right-radius: 0px;border-top-left-radius: 0px;border-bottom-left-radius: 0px;">Compartir</button><a class="btn btn-primary" role="button" style="width: 100%;background: rgb(17,35,52);border-style: none;border-top-left-radius: 0px;border-bottom-left-radius: 0px;border-top-right-radius: 0px;" href="https://buy.stripe.com/bIY3cGfHV1Fsc24aEJ">Adquirir</a></div>
+                                    <div class="d-flex align-items-center"><a class="btn btn-primary" role="button" style="width: 100%;background: rgb(255,255,255);border-style: none;border-top-right-radius: 0px;border-bottom-right-radius: 0px;border-top-left-radius: 0px;color: rgb(17,35,52);" href="https://api.whatsapp.com/send?phone=34667903928&amp;text=Un%20cordial%20saludo%2C%20me%20gustar%C3%ADa%20saber%20informaci%C3%B3n%20de%20esta%20la%20oferta%3A%20Limpieza%20%2B%20Blanqueamiento%20Express.">Información</a><button class="btn btn-primary" type="button" style="width: 100%;background: rgb(17,35,52);border-style: none;border-top-right-radius: 0px;border-bottom-right-radius: 0px;border-top-left-radius: 0px;border-bottom-left-radius: 0px;">Compartir</button><a class="btn btn-primary" role="button" style="width: 100%;background: rgb(17,35,52);border-style: none;border-top-left-radius: 0px;border-bottom-left-radius: 0px;border-top-right-radius: 0px;" href="https://buy.stripe.com/bIY3cGfHV1Fsc24aEJ">Adquirir</a></div>
                                 </div>
                             </div>
                             <div class="col-12" style="margin-top: 53px;">
@@ -124,7 +149,7 @@
                                         <h4 class="card-title" style="color: var(--bs-body-bg);">Implante + Corona</h4>
                                         <h6 class="mb-2" style="color: var(--bs-body-bg);">OFERTA LIMITADA</h6>
                                     </div>
-                                    <div class="d-flex align-items-center"><button class="btn btn-primary" type="button" style="width: 100%;background: rgb(255,255,255);border-style: none;border-top-right-radius: 0px;border-bottom-right-radius: 0px;border-top-left-radius: 0px;color: rgb(17,35,52);">Información</button><button class="btn btn-primary" type="button" style="width: 100%;background: rgb(17,35,52);border-style: none;border-top-right-radius: 0px;border-bottom-right-radius: 0px;border-top-left-radius: 0px;border-bottom-left-radius: 0px;">Compartir</button><a class="btn btn-primary" role="button" style="width: 100%;background: rgb(17,35,52);border-style: none;border-top-left-radius: 0px;border-bottom-left-radius: 0px;border-top-right-radius: 0px;" href="https://buy.stripe.com/8wM7sW67l0Bo7LObIM"><span style="color: var(--bs-btn-hover-color);">Adquirir</span></a></div>
+                                    <div class="d-flex align-items-center"><a class="btn btn-primary" role="button" style="width: 100%;background: rgb(255,255,255);border-style: none;border-top-right-radius: 0px;border-bottom-right-radius: 0px;border-top-left-radius: 0px;color: rgb(17,35,52);" href="https://api.whatsapp.com/send?phone=34667903928&amp;text=Un%20cordial%20saludo%2C%20me%20gustar%C3%ADa%20saber%20informaci%C3%B3n%20de%20esta%20la%20oferta%3A%20Implante%20Dental%20%2B%20Corona">Información</a><button class="btn btn-primary" type="button" style="width: 100%;background: rgb(17,35,52);border-style: none;border-top-right-radius: 0px;border-bottom-right-radius: 0px;border-top-left-radius: 0px;border-bottom-left-radius: 0px;">Compartir</button><a class="btn btn-primary" role="button" style="width: 100%;background: rgb(17,35,52);border-style: none;border-top-left-radius: 0px;border-bottom-left-radius: 0px;border-top-right-radius: 0px;" href="https://buy.stripe.com/8wM7sW67l0Bo7LObIM"><span style="color: var(--bs-btn-hover-color);">Adquirir</span></a></div>
                                 </div>
                             </div>
                             <div class="col-12" style="margin-top: 53px;">
@@ -134,7 +159,7 @@
                                         <h4 class="card-title" style="color: var(--bs-body-bg);">Ortodoncia Invisible</h4>
                                         <h6 class="mb-2" style="color: var(--bs-body-bg);">OFERTA LIMITADA</h6>
                                     </div>
-                                    <div class="d-flex align-items-center"><button class="btn btn-primary" type="button" style="width: 100%;background: rgb(255,255,255);border-style: none;border-top-right-radius: 0px;border-bottom-right-radius: 0px;border-top-left-radius: 0px;color: rgb(17,35,52);">Información</button><button class="btn btn-primary" type="button" style="width: 100%;background: rgb(17,35,52);border-style: none;border-top-right-radius: 0px;border-bottom-right-radius: 0px;border-top-left-radius: 0px;border-bottom-left-radius: 0px;">Compartir</button><a class="btn btn-primary" role="button" style="width: 100%;background: rgb(17,35,52);border-style: none;border-top-left-radius: 0px;border-bottom-left-radius: 0px;border-top-right-radius: 0px;" href="https://buy.stripe.com/fZe28C1R50Bo3vy3cf"><span style="color: var(--bs-btn-hover-color);">Adquirir</span></a></div>
+                                    <div class="d-flex align-items-center"><a class="btn btn-primary" role="button" style="width: 100%;background: rgb(255,255,255);border-style: none;border-top-right-radius: 0px;border-bottom-right-radius: 0px;border-top-left-radius: 0px;color: rgb(17,35,52);" href="https://api.whatsapp.com/send?phone=34667903928&amp;text=Un%20cordial%20saludo%2C%20me%20gustar%C3%ADa%20saber%20informaci%C3%B3n%20de%20esta%20la%20oferta%3A%20Ortodoncia%20Invisible.">Información</a><button class="btn btn-primary" type="button" style="width: 100%;background: rgb(17,35,52);border-style: none;border-top-right-radius: 0px;border-bottom-right-radius: 0px;border-top-left-radius: 0px;border-bottom-left-radius: 0px;">Compartir</button><a class="btn btn-primary" role="button" style="width: 100%;background: rgb(17,35,52);border-style: none;border-top-left-radius: 0px;border-bottom-left-radius: 0px;border-top-right-radius: 0px;" href="https://buy.stripe.com/fZe28C1R50Bo3vy3cf"><span style="color: var(--bs-btn-hover-color);">Adquirir</span></a></div>
                                 </div>
                             </div>
                             <div class="col-12" style="margin-top: 53px;">
@@ -144,7 +169,7 @@
                                         <h4 class="card-title" style="color: var(--bs-body-bg);">Coronas de Zirconio</h4>
                                         <h6 class="mb-2" style="color: var(--bs-body-bg);">OFERTA LIMITADA</h6>
                                     </div>
-                                    <div class="d-flex align-items-center"><button class="btn btn-primary" type="button" style="width: 100%;background: rgb(255,255,255);border-style: none;border-top-right-radius: 0px;border-bottom-right-radius: 0px;border-top-left-radius: 0px;color: rgb(17,35,52);">Información</button><button class="btn btn-primary" type="button" style="width: 100%;background: rgb(17,35,52);border-style: none;border-top-right-radius: 0px;border-bottom-right-radius: 0px;border-top-left-radius: 0px;border-bottom-left-radius: 0px;">Compartir</button><a class="btn btn-primary" role="button" style="width: 100%;background: rgb(17,35,52);border-style: none;border-top-left-radius: 0px;border-bottom-left-radius: 0px;border-top-right-radius: 0px;" href="https://buy.stripe.com/6oE3cGcvJ6ZMeac5km"><span style="color: var(--bs-btn-hover-color);">Adquirir</span></a></div>
+                                    <div class="d-flex align-items-center"><a class="btn btn-primary" role="button" style="width: 100%;background: rgb(255,255,255);border-style: none;border-top-right-radius: 0px;border-bottom-right-radius: 0px;border-top-left-radius: 0px;color: rgb(17,35,52);" href="https://api.whatsapp.com/send?phone=34667903928&amp;text=Un%20cordial%20saludo%2C%20me%20gustar%C3%ADa%20saber%20informaci%C3%B3n%20de%20esta%20la%20oferta%3A%20Corona%20de%20Zirconio.">Información</a><button class="btn btn-primary" type="button" style="width: 100%;background: rgb(17,35,52);border-style: none;border-top-right-radius: 0px;border-bottom-right-radius: 0px;border-top-left-radius: 0px;border-bottom-left-radius: 0px;">Compartir</button><a class="btn btn-primary" role="button" style="width: 100%;background: rgb(17,35,52);border-style: none;border-top-left-radius: 0px;border-bottom-left-radius: 0px;border-top-right-radius: 0px;" href="https://buy.stripe.com/6oE3cGcvJ6ZMeac5km"><span style="color: var(--bs-btn-hover-color);">Adquirir</span></a></div>
                                 </div>
                             </div>
                             <div class="col-12" style="margin-top: 53px;">
@@ -154,7 +179,7 @@
                                         <h4 class="card-title" style="color: var(--bs-body-bg);">Blanqueamiento Philips Z</h4>
                                         <h6 class="mb-2" style="color: var(--bs-body-bg);">OFERTA LIMITADA</h6>
                                     </div>
-                                    <div class="d-flex align-items-center"><button class="btn btn-primary" type="button" style="width: 100%;background: rgb(255,255,255);border-style: none;border-top-right-radius: 0px;border-bottom-right-radius: 0px;border-top-left-radius: 0px;color: rgb(17,35,52);">Información</button><button class="btn btn-primary" type="button" style="width: 100%;background: rgb(17,35,52);border-style: none;border-top-right-radius: 0px;border-bottom-right-radius: 0px;border-top-left-radius: 0px;border-bottom-left-radius: 0px;">Compartir</button><a class="btn btn-primary" role="button" style="width: 100%;background: rgb(17,35,52);border-style: none;border-top-left-radius: 0px;border-bottom-left-radius: 0px;border-top-right-radius: 0px;" href="https://buy.stripe.com/5kA8x00N15VIaY0aEF"><span style="color: var(--bs-btn-hover-color);">Adquirir</span></a></div>
+                                    <div class="d-flex align-items-center"><a class="btn btn-primary" role="button" style="width: 100%;background: rgb(255,255,255);border-style: none;border-top-right-radius: 0px;border-bottom-right-radius: 0px;border-top-left-radius: 0px;color: rgb(17,35,52);" href="https://api.whatsapp.com/send?phone=34667903928&amp;text=Un%20cordial%20saludo%2C%20me%20gustar%C3%ADa%20saber%20informaci%C3%B3n%20de%20esta%20la%20oferta%3A%20Blanqueamiento%20Philips%20Zoom.">Información</a><button class="btn btn-primary" type="button" style="width: 100%;background: rgb(17,35,52);border-style: none;border-top-right-radius: 0px;border-bottom-right-radius: 0px;border-top-left-radius: 0px;border-bottom-left-radius: 0px;">Compartir</button><a class="btn btn-primary" role="button" style="width: 100%;background: rgb(17,35,52);border-style: none;border-top-left-radius: 0px;border-bottom-left-radius: 0px;border-top-right-radius: 0px;" href="https://buy.stripe.com/5kA8x00N15VIaY0aEF"><span style="color: var(--bs-btn-hover-color);">Adquirir</span></a></div>
                                 </div>
                             </div>
                             <div class="col-12" style="margin-top: 53px;">
@@ -163,7 +188,7 @@
                                         <div class="bs-icon-lg bs-icon-rounded bs-icon-primary d-flex flex-shrink-0 justify-content-center align-items-center position-absolute mb-3 bs-icon lg" style="top: -30px;background: url(&quot;assets/img/LOGO%20EDIT.webp&quot;) center / cover;"></div>
                                         <h4 class="card-title" style="color: var(--bs-body-bg);">Carilla e Max + Diseño 3D</h4>
                                     </div>
-                                    <div class="d-flex align-items-center"><button class="btn btn-primary" type="button" style="width: 100%;background: rgb(255,255,255);border-style: none;border-top-right-radius: 0px;border-bottom-right-radius: 0px;border-top-left-radius: 0px;color: rgb(17,35,52);">Información</button><button class="btn btn-primary" type="button" style="width: 100%;background: rgb(17,35,52);border-style: none;border-top-right-radius: 0px;border-bottom-right-radius: 0px;border-top-left-radius: 0px;border-bottom-left-radius: 0px;">Compartir</button><a class="btn btn-primary" role="button" style="width: 100%;background: rgb(17,35,52);border-style: none;border-top-left-radius: 0px;border-bottom-left-radius: 0px;border-top-right-radius: 0px;" href="https://buy.stripe.com/eVa4gK1R51Fs9TW000">Adquirir</a></div>
+                                    <div class="d-flex align-items-center"><a class="btn btn-primary" role="button" style="width: 100%;background: rgb(255,255,255);border-style: none;border-top-right-radius: 0px;border-bottom-right-radius: 0px;border-top-left-radius: 0px;color: rgb(17,35,52);" href="https://api.whatsapp.com/send?phone=34667903928&amp;text=Un%20cordial%20saludo%2C%20me%20gustar%C3%ADa%20saber%20informaci%C3%B3n%20de%20esta%20la%20oferta%3A%20Carilla%20e%20Max%20%2B%20Dise%C3%B1o%203D.">Información</a><button class="btn btn-primary" type="button" style="width: 100%;background: rgb(17,35,52);border-style: none;border-top-right-radius: 0px;border-bottom-right-radius: 0px;border-top-left-radius: 0px;border-bottom-left-radius: 0px;">Compartir</button><a class="btn btn-primary" role="button" style="width: 100%;background: rgb(17,35,52);border-style: none;border-top-left-radius: 0px;border-bottom-left-radius: 0px;border-top-right-radius: 0px;" href="https://buy.stripe.com/eVa4gK1R51Fs9TW000">Adquirir</a></div>
                                 </div>
                             </div>
                         </div>
